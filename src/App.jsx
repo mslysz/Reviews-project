@@ -21,12 +21,11 @@ const App = () => {
     }
   };
   const randomPerson = () => {
-    let randomNumber = Math.ceil(Math.random() * people.length - 1);
+    let randomNumber = Math.floor(Math.random() * people.length);
     if (randomNumber === index) {
       randomNumber = (randomNumber + 1) % people.length;
     }
     setIndex(randomNumber);
-    console.log(randomNumber);
   };
   return (
     <main>
